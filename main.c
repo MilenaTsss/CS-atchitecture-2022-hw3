@@ -25,6 +25,7 @@ void output(FILE *output_, double out, unsigned int precision) {
     sprintf(format + 2, "%u", precision);
     strcat(format, "f\n");
     fprintf(output_, format, out);
+    free(format);
 }
 
 int main(int argc, char *argv[]) {
