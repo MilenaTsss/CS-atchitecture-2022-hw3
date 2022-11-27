@@ -113,6 +113,8 @@ output:
 	mov	rdi, r12					# rdi = output
 	mov	eax, 1
 	call	fprintf@PLT					# fprintf(output_, format, out);
+	mov	rdi, rbx
+	call	free@PLT					# free char* format
 	add	rsp, 24					# epilogue
 	pop	rbx
 	pop	r12
